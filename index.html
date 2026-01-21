@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabino Yosef Garmon | Web Oficial y Tienda</title>
+    <style>
+        :root {
+            --navy: #0a192f;
+            --gold: #c5a059;
+            --amazon-orange: #ff9900;
+            --light-bg: #f9f7f2;
+            --white: #ffffff;
+        }
+
+        body { font-family: 'EB Garamond', serif; margin: 0; color: var(--navy); background-color: var(--white); line-height: 1.6; }
+        
+        /* Navegación */
+        nav { background: var(--white); padding: 1rem; position: sticky; top: 0; display: flex; justify-content: center; gap: 30px; border-bottom: 1px solid #eee; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        nav a { text-decoration: none; color: var(--navy); font-weight: bold; font-family: sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        nav a:hover { color: var(--gold); }
+
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
+
+        /* Hero / Bio */
+        .hero { display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; padding: 60px 0; align-items: center; }
+        .hero img { width: 100%; border-radius: 2px; box-shadow: 20px 20px 0 var(--light-bg); }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; border-bottom: 3px solid var(--gold); display: inline-block; }
+        
+        /* Testimonios */
+        .awards { background: var(--navy); color: white; padding: 60px 0; margin: 40px 0; }
+        .awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; text-align: center; }
+        .award-item { padding: 20px; border: 1px solid rgba(197, 160, 89, 0.3); }
+        .award-item p { font-style: italic; font-size: 1.1rem; }
+        .award-item span { color: var(--gold); font-weight: bold; display: block; margin-top: 10px; font-size: 0.8rem; text-transform: uppercase; }
+
+        /* Libros */
+        .books-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; margin: 50px 0; }
+        .book-card { background: var(--light-bg); padding: 25px; border-radius: 4px; text-align: center; transition: 0.3s; border: 1px solid #eee; }
+        .book-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .book-card img { width: 100%; height: 350px; object-fit: cover; margin-bottom: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .book-card h3 { font-size: 1.3rem; min-height: 60px; margin-bottom: 10px; }
+
+        /* Botones de Amazon */
+        .btn-amazon { 
+            background: var(--amazon-orange); 
+            color: #111; 
+            padding: 12px 20px; 
+            border: none; 
+            border-radius: 4px; 
+            text-decoration: none; 
+            display: inline-block; 
+            font-weight: bold; 
+            font-family: sans-serif; 
+            font-size: 0.9rem;
+            transition: 0.3s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .btn-amazon:hover { background: #e68a00; transform: scale(1.05); }
+
+        /* Sección de Contenido */
+        .toc-preview { background: #fff; padding: 40px; border: 1px solid var(--gold); margin: 60px 0; }
+        .toc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 0.95rem; }
+        .toc-tag { background: var(--light-bg); padding: 5px 10px; border-radius: 3px; display: inline-block; margin-bottom: 5px; font-weight: bold; color: var(--gold); }
+
+        footer { text-align: center; padding: 40px; font-size: 0.9rem; border-top: 1px solid #eee; margin-top: 60px; color: #666; }
+
+        @media (max-width: 768px) { .hero, .toc-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#biografia">Sobre el Autor</a>
+        <a href="#libros">Catálogo</a>
+        <a href="#contenido">Explorar Capítulos</a>
+        <a href="https://www.amazon.com" target="_blank">Página de Amazon</a>
+    </nav>
+
+    <div class="container">
+        <section id="biografia" class="hero">
+            <img src="https://via.placeholder.com/400x550?text=Rabino+Yosef+Garmon" alt="Rabino Yosef Garmon">
+            <div>
+                <h1>Yosef Garmon</h1>
+                <p style="font-size: 1.3rem; color: var(--gold); margin-top: 0; font-family: sans-serif; letter-spacing: 2px;">AUTOR Y LÍDER HUMANITARIO</p>
+                <p>Nacido en Jerusalén en 1988, el Rabino Yosef Garmon es una figura clave en la conexión entre espiritualidad y acción social. Con experiencia en más de cien países, su obra literaria traduce conceptos profundos a un lenguaje accesible para todo el mundo.</p>
+                <p><strong>"No debemos preguntarnos por qué existe el mal; debemos responder haciendo el bien."</strong></p>
+            </div>
+        </section>
+    </div>
+
+    <section class="awards">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--gold); margin-bottom: 40px; font-size: 2rem;">Reconocimientos Internacionales</h2>
+            <div class="awards-grid">
+                <div class="award-item">
+                    <p>"Toma ideas profundas, las presenta en un lenguaje sencillo y llegan al corazón."</p>
+                    <span>— Jimmy Morales, Expresidente de Guatemala</span>
+                </div>
+                <div class="award-item">
+                    <p>"El judío más influyente de América Latina... papel clave en el traslado de la embajada."</p>
+                    <span>— YNET News</span>
+                </div>
+                <div class="award-item">
+                    <p>"Tiene solo 30 años, pero con la experiencia de uno de 60."</p>
+                    <span>— Makor Rishon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="libros">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 10px;">Biblioteca Oficial</h2>
+            <p style="text-align: center; margin-bottom: 40px;">Disponibles para envío internacional a través de Amazon</p>
+            
+            <div class="books-grid">
+                <div class="book-card">
+                    <img src="https://via.placeholder.com/300x450?text=Rompe+Mentiras" alt="Rompe Mentiras">
+                    <h3>Rompe Mentiras</h3>
+                    <p>Desmintiendo mitos sobre el conflicto árabe-palestino.</p>
+                    <a href="ENLACE_AMAZON_1" target="_blank" class="btn-amazon">Comprar en Amazon</a>
+                </div>
+                <div class="book-card">
+                    <img src="https://via.placeholder.com/300x450?text=Torologia" alt="Toralogía">
+                    <h3>Toralogía</h3>
+                    <p>Historias profundas con humor sobre la Torá.</p>
+                    <a href="ENLACE_AMAZON_2" target="_blank" class="btn-amazon">Comprar en Amazon</a>
+                </div>
+                <div class="book-card">
+                    <img src="https://via.placeholder.com/300x450?text=Biblia+Mundo+1" alt="Biblia 1">
+                    <h3>Alrededor del mundo con la Biblia 1</h3>
+                    <p>Un viaje por los dos primeros libros de la Torá.</p>
+                    <a href="ENLACE_AMAZON_3" target="_blank" class="btn-amazon">Comprar en Amazon</a>
+                </div>
+                <div class="book-card">
+                    <img src="https://via.placeholder.com/300x450?text=Biblia+Mundo+2" alt="Biblia 2">
+                    <h3>Alrededor del mundo con la Biblia 2</h3>
+                    <p>Levítico, Números y Deuteronomio con mirada global.</p>
+                    <a href="ENLACE_AMAZON_4" target="_blank" class="btn-amazon">Comprar en Amazon</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contenido" class="toc-preview">
+            <h2 style="text-align: center; margin-top: 0; color: var(--navy);">Explora "Alrededor del mundo con la Biblia 2"</h2>
+            <div class="toc-grid">
+                <div>
+                    <span class="toc-tag">Vayikra (Levítico)</span>
+                    <p>• Círculo al cuadrado<br>• Talón de Akiva vs talón de Aquiles</p>
+                    <span class="toc-tag">Bamidbar (Números)</span>
+                    <p>• ¿Qué hubiera pasado si los espías fueran mujeres?<br>• La voz del silencio</p>
+                </div>
+                <div>
+                    <span class="toc-tag">Devarim (Deuteronomio)</span>
+                    <p>• Si fueras Dios por un día, ¿qué harías?<br>• Medio billón de judíos...</p>
+                    <span class="toc-tag">Reflexiones Especiales</span>
+                    <p>• ¿Quién es el Mesías?<br>• ¿Un acuerdo de paz con Dios?</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>Contacto Directo:</strong> 1yosef1@gmail.com</p>
+        <p>&copy; 2026 Rabino Yosef Garmon. Todos los derechos reservados.</p>
+        <p style="font-size: 0.75rem;">Diseño y edición: Erwin Jacobo Ghitis Hoffstadt | Imágenes del autor</p>
+    </footer>
+
+</body>
+</html>
